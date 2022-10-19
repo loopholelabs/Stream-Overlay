@@ -1,0 +1,21 @@
+.dashboard-page {
+	font-size: 80px;
+
+	table {
+		border-spacing: 10px;
+		table-layout: fixed;
+		width: 100%;
+
+		tr {
+			background-color: white;
+
+			&:hover {
+				background-color: grey;
+			}
+		}
+
+		th, td {
+			text-align: left;
+		}
+	}
+}

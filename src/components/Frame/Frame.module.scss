@@ -1,0 +1,11 @@
+.frame {
+	background-color: var(--chroma-color);
+	border-image-slice: 7;
+	border-image-source: linear-gradient(
+		320.49deg,
+		#7E12DD 1.03%,
+		#B530DD 94.85%,
+	);
+	border-style: solid;
+	border-width: 7px;
+}

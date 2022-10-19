@@ -1,0 +1,80 @@
+.scene-wrapper {
+	--top-padding: 240px;
+
+	height: 2160px;
+	overflow: hidden;
+	width: 3840px;
+
+	.frame {
+		position: absolute;
+
+		&.host,
+		&.guest,
+		&.chat {
+			left: 270px;
+			width: 695px;
+		}
+
+		&.host {
+			height: 695px;
+			top: var(--top-padding);
+		}
+
+		&.guest {
+			height: 695px;
+			top: 875px;
+		}
+
+		&.chat {
+			height: 880px;
+			top: 875px;
+		}
+
+		&.screen-share {
+			height: 1625px;
+			left: 1108px;
+			top: var(--top-padding);
+			width: 2463px;
+		}
+	}
+
+	&.is-chat-enabled.is-guest-enabled {
+		--camera-frame-height: 650px;
+		--camera-frame-width: 553px;
+		--horizontal-padding: 130px;
+		--screen-share-frame-height: 1400px;
+
+		--screen-share-vertical-offset: calc((var(--screen-share-frame-height) - (var(--camera-frame-height) * 2)) / 2);
+
+		.frame {
+			&.host,
+			&.guest {
+				height: var(--camera-frame-height);
+				left: var(--horizontal-padding);
+				width: var(--camera-frame-width);
+			}
+
+			&.host {
+				top: calc(var(--top-padding) + var(--screen-share-vertical-offset));
+			}
+
+			&.guest {
+				top: calc(var(--top-padding) + var(--screen-share-vertical-offset) + var(--camera-frame-height));
+			}
+
+			&.screen-share {
+				left: 676px;
+				height: var(--screen-share-frame-height);
+				width: 2488px;
+			}
+
+			&.chat {
+				height: calc(var(--camera-frame-height) * 2);
+				left: auto;
+				right: var(--horizontal-padding);
+				top: calc(var(--top-padding) + var(--screen-share-vertical-offset));
+				width: var(--camera-frame-width);
+			}
+		}
+	}
+}

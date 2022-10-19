@@ -1,0 +1,41 @@
+.scene-wrapper {
+	height: 2160px;
+	overflow: hidden;
+	width: 3840px;
+
+	.frame {
+		height: 1240px;
+		position: absolute;
+		top: 350px;
+
+		&.host,
+		&.guest {
+			width: 1240px;
+		}
+
+		&.host {
+			left: 612px;
+		}
+
+		&.guest {
+			left: 1989px;
+		}
+
+		&.chat {
+			left: 2893px;
+			width: 695px;
+		}
+	}
+
+	&.is-chat-enabled {
+		.frame {
+			&.host {
+				left: 253px;
+			}
+
+			&.guest {
+				left: 1573px;
+			}
+		}
+	}
+}
