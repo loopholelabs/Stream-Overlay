@@ -1,5 +1,5 @@
 // Style imports
-import styles from './Chat.module.scss'
+import styles from './chat.module.scss'
 
 
 
