@@ -25,8 +25,6 @@ export function Alerts() {
 		events: state.events,
 	}))
 
-	console.log({events})
-
 	return (
 		<div className={styles['alerts']}>
 			<AnimatePresence>
